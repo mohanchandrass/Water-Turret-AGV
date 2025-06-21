@@ -13,7 +13,7 @@ This repository provides everything needed to simulate a differential drive mobi
 
 ## 🎥 Gazebo Simulation Demo
 
-![Gazebo Demo](images/rec.gif)
+![Gazebo Demo](demo/rec.gif)
 
 
 ---
