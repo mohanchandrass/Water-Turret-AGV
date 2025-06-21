@@ -5,7 +5,7 @@ This repository provides everything needed to simulate a differential drive mobi
 
 ![RViz View](images/simulation_rviz.png)
 ![Gazebo View](images/simulation_obj2.png)
-![Gazebo View](images/simulation_obstacle_avoid.png)
+![Gazebo View](demo/rec.mp4)
 
 ---
 
