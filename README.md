@@ -5,8 +5,10 @@ This repository provides everything needed to simulate a differential drive mobi
 
 ![RViz View](images/simulation_rviz.png)
 ![Gazebo View](images/simulation_obj2.png)
-![Gazebo View](demo/rec.mp4)
-
+<video width="640" height="360" controls autoplay loop muted>
+  <source src="demo/rec.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 ---
 
 ## 📚 Table of Contents
