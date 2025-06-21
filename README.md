@@ -188,4 +188,4 @@ Open an issue or a pull request if you find bugs, want to improve this project, 
 
 ## 📄 License
 
-[MIT License](LICENSE) — _Please replace with the actual license you're using._
+[MIT License](LICENSE) 
