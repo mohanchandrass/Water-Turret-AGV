@@ -1,0 +1,372 @@
+<robot>
+
+<gazebo reference="base_link">
+    <mu1>0.0</mu1>
+    <mu2>0.0</mu2>
+    <material>Gazebo/Orange</material>
+</gazebo>
+
+<gazebo reference="lidar_link">
+    <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="turret_base">
+  <mu1>0.1</mu1>
+  <mu2>0.1</mu2>
+  <material>Gazebo/Black</material>
+</gazebo>
+
+<gazebo reference="turret">
+  <mu1>0.1</mu1>
+  <mu2>0.1</mu2>
+  <material>Gazebo/Red</material>
+</gazebo>
+
+<gazebo reference="nozzle_link">
+  <mu1>0.1</mu1>
+  <mu2>0.1</mu2>
+  <material>Gazebo/Silver</material>
+</gazebo>
+
+<gazebo reference="arm_link_1">
+  <mu1>0.1</mu1>
+  <mu2>0.1</mu2>
+  <material>Gazebo/Blue</material>
+</gazebo>
+
+<gazebo reference="arm_link_2">
+  <mu1>0.1</mu1>
+  <mu2>0.1</mu2>
+  <material>Gazebo/Green</material>
+</gazebo>
+  
+
+  <gazebo reference="rear_left_wheel">
+    <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="rear_right_wheel">
+    <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="front_left_wheel">
+    <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="front_right_wheel">
+    <mu1>0.4</mu1>
+    <mu2>0.4</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="camera_link">
+    <mu1>0.00001</mu1>
+    <mu2>0.00001</mu2>
+    <material>Gazebo/Yellow</material>
+  </gazebo>
+
+  <gazebo reference="camera_link_1">
+    <mu1>0.00001</mu1>
+    <mu2>0.00001</mu2>
+    <material>Gazebo/Red</material>
+  </gazebo>
+
+  <gazebo reference="camera_link_2">
+    <mu1>0.00001</mu1>
+    <mu2>0.00001</mu2>
+    <material>Gazebo/Blue</material>
+  </gazebo>
+
+  <gazebo reference="camera_link_3">
+    <mu1>0.00001</mu1>
+    <mu2>0.00001</mu2>
+    <material>Gazebo/Green</material>
+  </gazebo>
+
+  <gazebo reference="camera_link_4">
+    <mu1>0.00001</mu1>
+    <mu2>0.00001</mu2>
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+<gazebo reference  = "camera_link">
+  <sensor name="camera" type="camera">
+    <update_rate>10</update_rate>
+    <visualize>true</visualize>
+    <camera name="my_cam">
+      <horizontal_fov>1.3</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8B8G8</format>
+      </image>
+      <clip>
+        <near>0.01</near>
+        <far>10</far>
+      </clip>
+      <!--<noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>-->
+    </camera>
+    <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+      <frame_name>camera_link_optical</frame_name>
+      <min_depth>0.1</min_depth>
+      <max_depth>100</max_depth> 
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference  = "camera_link_1">
+  <sensor name="camera1" type="camera">
+    <update_rate>10</update_rate>
+    <visualize>true</visualize>
+    <camera name="my_cam">
+      <horizontal_fov>1.3</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8B8G8</format>
+      </image>
+      <clip>
+        <near>0.01</near>
+        <far>10</far>
+      </clip>
+      <!--<noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>-->
+    </camera>
+    <plugin name="camera_controller_1" filename="libgazebo_ros_camera.so">
+      <frame_name>camera_link_optical_1</frame_name>
+      <min_depth>0.1</min_depth>
+      <max_depth>100</max_depth> 
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference  = "camera_link_2">
+  <sensor name="camera2" type="camera">
+    <update_rate>10</update_rate>
+    <visualize>true</visualize>
+    <camera name="my_cam">
+      <horizontal_fov>1.3</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8B8G8</format>
+      </image>
+      <clip>
+        <near>0.01</near>
+        <far>10</far>
+      </clip>
+      <!--<noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>-->
+    </camera>
+    <plugin name="camera_controller_2" filename="libgazebo_ros_camera.so">
+      <frame_name>camera_link_optical_2</frame_name>
+      <min_depth>0.1</min_depth>
+      <max_depth>100</max_depth> 
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference  = "camera_link_3">
+  <sensor name="camera3" type="camera">
+    <update_rate>10</update_rate>
+    <visualize>true</visualize>
+    <camera name="my_cam">
+      <horizontal_fov>1.3</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8B8G8</format>
+      </image>
+      <clip>
+        <near>0.01</near>
+        <far>10</far>
+      </clip>
+      <!--<noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>-->
+    </camera>
+    <plugin name="camera_controller_3" filename="libgazebo_ros_camera.so">
+      <frame_name>camera_link_optical_3</frame_name>
+      <min_depth>0.1</min_depth>
+      <max_depth>100</max_depth> 
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference  = "camera_link_4">
+  <sensor name="camera4" type="camera">
+    <update_rate>10</update_rate>
+    <visualize>true</visualize>
+    <camera name="my_cam">
+      <horizontal_fov>1.3</horizontal_fov>
+      <image>
+        <width>640</width>
+        <height>480</height>
+        <format>R8B8G8</format>
+      </image>
+      <clip>
+        <near>0.01</near>
+        <far>10</far>
+      </clip>
+      <!--<noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>-->
+    </camera>
+    <plugin name="camera_controller_4" filename="libgazebo_ros_camera.so">
+      <frame_name>camera_link_optical_4</frame_name>
+      <min_depth>0.1</min_depth>
+      <max_depth>100</max_depth> 
+    </plugin>
+  </sensor>
+</gazebo>
+
+<gazebo reference="lidar_link">
+  <sensor type="ray" name="lidar_sensor">
+    <pose>0 0 0 0 0 0</pose>
+    <visualize>true</visualize>
+    <update_rate>10</update_rate>
+    <ray>
+      <scan>
+        <horizontal>
+          <samples>360</samples>
+          <resolution>1.0</resolution>
+          <min_angle>-3.14159</min_angle> <!-- -180° -->
+          <max_angle>3.14159</max_angle>  <!-- +180° -->
+        </horizontal>
+      </scan>
+      <range>
+        <min>0.1</min>
+        <max>10.0</max>
+        <resolution>0.01</resolution>
+      </range>
+      <noise>
+        <type>gaussian</type>
+        <mean>0.0</mean>
+        <stddev>0.01</stddev>
+      </noise>
+    </ray>
+    <plugin name="lidar_controller" filename="libgazebo_ros_ray_sensor.so">
+      <ros>
+        <namespace>/</namespace>
+        <remapping>~/out:=scan</remapping>
+      </ros>
+      <output_type>sensor_msgs/LaserScan</output_type>
+      <frame_name>lidar_link</frame_name>
+    </plugin>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference="nozzle_link">
+  <sensor name="water_spray" type="particle_emitter">
+    <update_rate>30</update_rate>
+    <pose>0 0 0 0 0 0</pose>
+    <particle_emitter>
+      <type>box</type>
+      <size>0.1 0.1 0.1</size>
+      <rate>1000</rate>
+      <duration>10</duration>
+      <velocity>1</velocity>
+      <color_start>0 0 1 0.8</color_start>
+      <color_end>0 0 1 0</color_end>
+      <lifetime>1</lifetime>
+      <min_angle>0</min_angle>
+      <max_angle>10</max_angle>
+    </particle_emitter>
+  </sensor>
+</gazebo>
+
+
+<gazebo reference="base_turret">
+  <plugin name="turret_base_controller" filename="libgazebo_ros_joint_control.so">
+    <joint_name>base_turret_base_joint</joint_name>
+    <control_type>position</control_type>
+    <max_force>5</max_force>
+    <p_gain>100</p_gain>
+    <d_gain>0.1</d_gain>
+    <i_gain>0.0</i_gain>
+    <target_position>0.0</target_position>
+    <command_topic>/turret_base_joint_position</command_topic> 
+  </plugin>
+</gazebo>
+
+<gazebo reference="turret_base">
+  <plugin name="turret_rotation_controller" filename="libgazebo_ros_joint_control.so">
+    <joint_name>turret_base_turret_joint</joint_name>
+    <control_type>position</control_type>
+    <max_force>5</max_force>
+    <p_gain>100</p_gain>
+    <d_gain>0.1</d_gain>
+    <i_gain>0.0</i_gain>
+    <target_position>0.0</target_position>
+    <command_topic>/turret_joint_position</command_topic>  <!-- Add this line for controlling turret position -->
+  </plugin>
+</gazebo>
+
+
+<gazebo>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+    <updateRate>10</updateRate>
+    <num_wheel_pairs>2</num_wheel_pairs>
+    <left_joint>base_fl_wheel_joint</left_joint>
+    <right_joint>base_fr_wheel_joint</right_joint>
+    <left_joint>base_rl_wheel_joint</left_joint>
+    <right_joint>base_rr_wheel_joint</right_joint>
+    <wheel_separation>0.6</wheel_separation>
+    <wheel_diameter>${2*wheel_radius}</wheel_diameter>
+    <max_wheel_acceleration>1.0</max_wheel_acceleration>
+    <max_wheel_torque>100</max_wheel_torque>
+    <odometry_frame>odom</odometry_frame>
+    <robot_base_frame>base_footprint</robot_base_frame>
+    <publish_wheel_tf>true</publish_wheel_tf>
+    <publish_odom>true</publish_odom>
+    <publish_odom_tf>true</publish_odom_tf>
+    <publish_wheel_joint_state>true</publish_wheel_joint_state>
+  </plugin>
+</gazebo>
+
+<plugin name="joint_state_publisher" type="joint_state_publisher/JointStatePublisher">
+  <joint_name>base_fl_wheel_joint</joint_name>
+  <joint_name>base_fr_wheel_joint</joint_name>
+  <joint_name>base_rl_wheel_joint</joint_name>
+  <joint_name>base_rr_wheel_joint</joint_name>
+  <joint_name>arm_link_1_joint</joint_name>
+  <joint_name>arm_link_2_joint</joint_name>
+  <joint_name>base_turret_base_joint</joint_name>
+  <joint_name>turret_base_turret_joint</joint_name>
+</plugin>
+
+
+  <gazebo>
+    <plugin name="turret_controller" filename="libgazebo_ros_joint_state_controller.so">
+      <joint>turret_base_turret_joint</joint>
+      <update_rate>10</update_rate>
+    </plugin>
+  </gazebo>
+
+  
+
+</robot>

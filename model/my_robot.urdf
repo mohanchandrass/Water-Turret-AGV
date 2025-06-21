@@ -1,0 +1,536 @@
+<?xml version="1.0"?>
+<robot name="agv_fire_sprinkler">
+
+  <material name="grey">
+    <color rgba="0.7 0.7 0.7 1"/>
+  </material>
+
+  <material name="green">
+    <color rgba="0 0.6 0 1"/>
+  </material>
+  
+  <material name="white">
+    <color rgba="1 1 1 1"/>
+  </material>
+
+  <material name="yellow">
+    <color rgba="1 1 0 1"/>
+  </material>
+
+  <material name="black">
+    <color rgba="0 0 0 1"/>
+  </material>
+
+  <material name="red">
+    <color rgba="1 0 0 1"/>
+  </material>
+
+  <material name="blue">
+    <color rgba="0 0 1 1"/>
+  </material>
+
+  <material name="silver">
+    <color rgba="0.7 0.7 0.7 1"/>
+  </material>
+
+  <material name="orange">
+    <color rgba="1.0 0.647 0.0 1"/>
+  </material>
+
+  <material name="cyan">
+    <color rgba="0.0 1.0 1.0 1"/>
+  </material>
+
+  <link name="base_footprint">
+    <inertial>
+      <mass value="0.001"/>
+      <inertia ixx="1e-6" ixy="0" ixz="0" iyy="1e-6" iyz="0" izz="1e-6"/>
+    </inertial>
+  </link>
+
+  <link name="base_link">
+    <visual>
+      <geometry>
+        <box size="0.7 0.5 0.2"/>
+      </geometry>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <material name="orange"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.7 0.5 0.2"/>
+      </geometry>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="2"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+  
+
+  <link name="camera_link">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="yellow"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+
+  <link name="camera_link_1">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+
+  <link name="camera_link_2">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+
+  <link name="camera_link_3">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+
+  <link name="camera_link_4">
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.05"/>
+      </geometry>
+    </collision>
+    <inertial>
+      <mass value="0.2"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+  <link name="rear_left_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.15"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+  <link name="rear_right_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.15"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+  <link name="front_left_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.15"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+  <link name="front_right_wheel">
+    <visual>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <material name="grey"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.1" length="0.05"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.15"/>
+      <inertia ixx="1e-3" ixy="0.0" ixz="0.0" iyy="1e-3" iyz="0.0" izz="1e-3"/>
+      <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+    </inertial>
+  </link>
+
+  <joint name="base_rr_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rear_right_wheel"/>
+    <origin xyz="-0.15 -0.275 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="0.4"/>
+  </joint>
+
+  <joint name="base_rl_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="rear_left_wheel"/>
+    <origin xyz="-0.15 0.275 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="0.4"/>
+  </joint>
+
+  <joint name="base_fr_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_right_wheel"/>
+    <origin xyz="0.15 -0.275 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="0.4"/>
+  </joint>
+
+  <joint name="base_fl_wheel_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="front_left_wheel"/>
+    <origin xyz="0.15 0.275 0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <dynamics damping="1.0" friction="0.4"/>
+  </joint>
+
+  <link name="nozzle_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.1" radius="0.015"/>
+      </geometry>
+      <material name="silver"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder length="0.1" radius="0.02"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+    <inertial>
+      <mass value="0.1"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/>
+    </inertial>
+  </link>
+
+  <link name="turret_base">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.19" length="0.10"/>
+      </geometry>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <material name="black"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.19" length="0.10"/>
+      </geometry>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <link name="turret">
+    <inertial>
+      <mass value="0.5"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <cylinder radius="0.15" length="0.07"/>
+      </geometry>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+      <material name="red"/>
+    </visual>
+    <collision>
+      <geometry>
+        <cylinder radius="0.15" length="0.07"/>
+      </geometry>
+      <origin xyz="0 0 0.05" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <link name="arm_link_1">
+    <inertial>
+      <mass value="0.2"/>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <inertia ixx="0.01" ixy="0" ixz="0" iyy="0.01" iyz="0" izz="0.01"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.05 0.05 0.25"/>
+      </geometry>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+      <material name="blue"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.05 0.05 0.25"/>
+      </geometry>
+      <origin xyz="0 0 0.125" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <joint name="turret_arm_joint" type="revolute">
+    <parent link="turret"/>
+    <child link="arm_link_1"/>
+    <origin xyz="0 0 0.07" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.23" upper="1.23" effort="5" velocity="1.0"/>
+  </joint>
+
+  <link name="lidar_link">
+  <visual>
+    <geometry>
+      <cylinder radius="0.05" length="0.02"/> 
+    </geometry>
+    <material name="red">
+      <color rgba="1 0 0 0.5"/>
+    </material>
+  </visual>
+  <collision>
+    <geometry>
+      <cylinder radius="0.05" length="0.02"/>
+    </geometry>
+  </collision>
+  <inertial>
+    <mass value="0.2"/>
+    <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+  </inertial>
+</link>
+
+  <link name="arm_link_2">
+    <inertial>
+      <mass value="0.15"/>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <inertia ixx="0.008" ixy="0" ixz="0" iyy="0.008" iyz="0" izz="0.008"/>
+    </inertial>
+    <visual>
+      <geometry>
+        <box size="0.04 0.04 0.2"/>
+      </geometry>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+      <material name="green"/>
+    </visual>
+    <collision>
+      <geometry>
+        <box size="0.04 0.04 0.2"/>
+      </geometry>
+      <origin xyz="0 0 0.1" rpy="0 0 0"/>
+    </collision>
+  </link>
+
+  <joint name="arm_to_nozzle" type="fixed">
+    <parent link="arm_link_2"/>
+    <child link="nozzle_link"/>
+    <origin xyz="0 0 0.25" rpy="0 0 0"/> 
+  </joint>
+
+  <joint name="arm_joint_2" type="revolute">
+    <parent link="arm_link_1"/>
+    <child link="arm_link_2"/>
+    <origin xyz="0 0 0.25" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.805" upper="0.805" effort="5" velocity="1.0"/>
+  </joint>
+
+  <joint name="base_turret_base_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="turret_base"/>
+    <origin xyz="0 0 0.15" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="1.5"/>
+  </joint>
+
+
+  <joint name="lidar_joint" type="fixed">
+    <parent link="base_link"/> 
+    <child link="lidar_link"/>
+    <origin xyz="0.3 0 0.2101" rpy="0 0 0"/>
+  </joint>
+
+
+  <joint name="turret_base_turret_joint" type="continuous">
+    <parent link="turret_base"/>
+    <child link="turret"/>
+    <origin xyz="0 0 0.08" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit effort="10" velocity="1.5"/>
+  </joint>
+
+  <joint name="base_footprint_to_base_link" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+  </joint>
+
+  <joint name="arm2_camera_joint" type="fixed">
+    <parent link="arm_link_2"/>
+    <child link="camera_link"/>
+    <origin xyz="-0.045 0 0.15" rpy="0.0 -1.570796326795 0.0"/>  
+  </joint> 
+
+  <joint name="base_camera_1_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link_1"/>
+    <origin xyz="0.37 0 0.15" rpy="0.0 0.0 0.0"/>
+  </joint>
+  
+  <joint name="base_camera_2_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link_2"/>
+    <origin xyz="0.005 0.27 0.15" rpy="-1.570796326795 0.0 1.570796326795"/>
+  </joint>
+
+  <joint name="base_camera_3_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link_3"/>
+    <origin xyz="-0.37 0 0.15" rpy="-1.570796326795 0.0 3.14159265359"/>
+  </joint>
+
+  <joint name="base_camera_4_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="camera_link_4"/>
+    <origin xyz="0.005 -0.27 0.15" rpy="-1.570796326795 0.0 -1.570796326795"/>
+  </joint>   
+
+  <joint name="camera_optical_joint" type="fixed">
+    <parent link="camera_link"/>
+    <child link="camera_link_optical"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 -1.570796326795 0.0"/>
+  </joint>
+
+  <joint name="camera_optical_joint_1" type="fixed">
+    <parent link="camera_link_1"/>
+    <child link="camera_link_optical_1"/>
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/> 
+  </joint>
+
+  <joint name="camera_optical_joint_2" type="fixed">
+    <parent link="camera_link_2"/>
+    <child link="camera_link_optical_2"/>
+    <origin xyz="0.0 0.0 0.0" rpy="-1.570796326795 0.0 0.0"/>
+  </joint> 
+
+  <joint name="camera_optical_joint_3" type="fixed">
+    <parent link="camera_link_3"/>
+    <child link="camera_link_optical_3"/>
+    <origin xyz="0.0 0.0 0.0" rpy="-1.570796326795 0.0 3.14159265359"/> 
+  </joint>
+
+  <joint name="camera_optical_joint_4" type="fixed">
+    <parent link="camera_link_4"/>
+    <child link="camera_link_optical_4"/>
+    <origin xyz="0.0 0.0 0.0" rpy="-1.570796326795 0.0 -1.570796326795"/> 
+  </joint>
+
+
+  <link name="camera_link_optical"> </link>
+  <link name="camera_link_optical_1"> </link>
+  <link name="camera_link_optical_2"> </link>
+  <link name="camera_link_optical_3"> </link>
+  <link name="camera_link_optical_4"> </link>
+
+</robot>
