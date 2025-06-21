@@ -46,7 +46,7 @@ This ROS2 package demonstrates a simulation of a mobile AGV robot equipped with 
 
 ---
 
-## ✅ Prerequisites
+## Prerequisites
 
 Ensure you have **ROS2 Humble** installed on Ubuntu.
 
@@ -93,7 +93,7 @@ rm -rf Water-Turret-AGV  # optional
 
 ---
 
-## 🚀 Running the Simulations
+## Running the Simulations
 
 ⚠️ Remember to **source your workspace** in every new terminal:
 
@@ -161,12 +161,7 @@ python3 ~/ws_my_robot/src/my_ddrobot/scripts/arm_turret_teleop.py
 chmod +x ~/ws_my_robot/src/my_ddrobot/scripts/arm_turret_teleop.py
 ```
 
-📷 Example:
-![Teleop Control](images/teleop_control.gif)
-
----
-
-## 🧾 Project Structure
+## Project Structure
 
 ```
 Water-Turret-AGV/
@@ -188,13 +183,13 @@ Water-Turret-AGV/
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome!  
 Open an issue or a pull request if you find bugs, want to improve this project, or need new features.
 
 ---
 
-## 📄 License
+## License
 
 [MIT License](LICENSE) 
