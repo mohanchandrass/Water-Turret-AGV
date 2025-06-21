@@ -3,15 +3,18 @@
 Welcome to the **Water-Turret-AGV** ROS2 package!  
 This repository provides everything needed to simulate a differential drive mobile robot equipped with a water turret. The robot is described using both **URDF (for RViz)** and **XACRO (for Gazebo)**, and can be controlled via keyboard teleoperation.
 
+## 🎥 RViz View
+
 ![RViz View](images/simulation_rviz.png)
+
+## 🎥 Gazebo View
+
 ![Gazebo View](images/simulation_obj2.png)
 
 ## 🎥 Gazebo Simulation Demo
 
-<video width="640" height="360" controls autoplay loop muted>
-  <source src="demo/rec.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+![Gazebo Demo](images/rec.gif)
+
 
 ---
 
